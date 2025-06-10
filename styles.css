@@ -1,0 +1,866 @@
+/* Import Fonts */
+@font-face {
+    font-family: 'TANSONGBIRD';
+    src: url('fonts/TANSONGBIRD.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'TT Chocolates Trial Medium';
+    src: url('fonts/TT Chocolates Trial Medium.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  /* Variables pour le mode clair */
+  :root {
+    --bg-body: #fff;
+    --text-color: #333;
+    --accueil-bg: #fbd6a1;
+    --titre-bg: #ffc067;
+    --nav-bg: #ffc067;
+    --nav-text: #5f7b99;
+    --nav-hover: #ed86ad;
+    --presentation-bg: #fbd6a1;
+    --presentation-container-bg: #ffe3bb;
+    --contact-right-bg: #ffdac5;
+    --presentation-text: #6b8f71;
+    --CV: #f53d8c;
+    --projets: #661efe;
+    --lavender: #c0a3e1;
+    --lila: #ebdcf1;
+    --contact: #ffdac5;
+    --checker: #f53d8c;
+    --contact_left: #c0a3e1;
+    --send_button: #661efe;
+    --send_button_hover: #ff0055;
+    --social: #f53d8c;
+  }
+  
+  /* Variables pour le mode dark */
+  body.dark-mode {
+    --bg-body: #000000;
+    --text-color: #eeeeee;
+    --accueil-bg: #333;
+    --titre-bg: #c0c0c0;
+    --nav-bg: #000000;
+    --nav-text: #ccc;
+    --nav-hover: #aaa;
+    --presentation-bg: #222;
+    --presentation-container-bg: #444;
+    --contact-right-bg: #222;
+    --presentation-text: #ffc067;
+    --CV: #000000;
+    --projets: #000000;
+    --lavender: #333;
+    --lila: #c0c0c0;
+    --contact: #eeeeee;
+    --checker: #000000;
+    --contact_left: #ffc067;
+    --send_button: #ccc;
+    --send_button_hover: #aaa;
+    --social: #000000;
+  }
+  
+ 
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-color);
+    line-height: 1.5;
+    transition: background-color 0.5s, color 0.5s;
+  }
+  
+  /* ACCUEIL */
+  .accueil {
+    position: relative;
+    min-height: 100vh;
+    background-color: var(--accueil-bg);
+    overflow: hidden;
+    margin: 0;
+  }
+  
+  .accueil-title-container {
+    position: relative;
+    background-color: var(--titre-bg);
+    width: 80%;
+    max-width: 1200px;
+    margin: 10rem auto 2rem;
+    padding: 2rem 8rem;
+    text-align: center;
+    overflow: visible;
+  }
+  
+  .accueil-title-image {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    transform: scale(1.2);
+    transform-origin: center center;
+  }
+  
+  .image-container {
+    position: absolute;
+    top: 84.5%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    z-index: 2;
+    width: 100%;
+    max-width: 1000px;
+  }
+  
+  .accueil-photo {
+    width: 100%;
+    height: auto;
+    border: none;
+    border-radius: 0;
+  }
+
+  @media (max-width: 768px) {
+    .image-container {
+      top: 48%;
+      width: 80%;
+    }
+  }
+  
+  /* NAV (sticky) */
+  .main-header {
+    position: sticky;
+    font-family: 'TANSONGBIRD', sans-serif;
+    top: 0;
+    background-color: var(--nav-bg);
+    z-index: 999;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .main-header ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 1rem;
+  }
+  
+  .main-header ul li a {
+    text-decoration: none;
+    color: var(--nav-text);
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .main-header ul li a:hover {
+    color: var(--nav-hover);
+  }
+
+  @media (max-width: 768px) {
+    .main-header ul li a {
+     font-size: small;
+    }
+  }
+  
+  /* PRESENTATION */
+  .presentation {
+    background-color: var(--presentation-bg);
+    padding: 3rem 1rem;
+  }
+  
+  .presentation-container {
+    position: relative;
+    background-color: var(--presentation-container-bg);
+    width: 80%;
+    max-width: 1200px;
+    margin: 2rem auto 2rem;
+    padding: 2rem 8rem;
+    text-align: center;
+    overflow: visible;
+  }
+  
+  .presentation-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+      "photo title"
+      "photo parag1"
+      "parag2 parag2"
+      "compet compet";
+    gap: 2rem;
+    margin-top: 2rem;
+    text-align: left;
+  }
+  
+  .photo-container {
+    grid-area: photo;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  .gif-frame {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .presentation-title {
+    grid-area: title;
+    text-align: left;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    font-family: 'TANSONGBIRD', sans-serif;
+    color: var(--presentation-text);
+  }
+
+  /* Bouton Obscurité */
+.inline-toggle {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-family: 'TANSONGBIRD', sans-serif;
+    color: var(--presentation-text);
+    font-size: 1em;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .inline-toggle:hover {
+    color: var(--nav-hover);
+    text-decoration: none;
+  }
+  
+  .inline-toggle:focus {
+    outline: none;
+  }
+  
+  .paragraph1 {
+    grid-area: parag1;
+    margin: 0;
+    line-height: 1.6;
+    text-align: right;
+    font-family: 'TT Chocolates Trial Medium', sans-serif;
+    color: var(--presentation-text);
+  }
+  
+  .paragraph2 {
+    grid-area: parag2;
+    margin: 0;
+    line-height: 1.6;
+    font-family: 'TT Chocolates Trial Medium', sans-serif;
+    color: var(--presentation-text);
+  }
+  
+  .competences-block {
+    grid-area: compet;
+    text-align: left;
+    margin-top: 1rem;
+  }
+  
+  .competences-block h3 {
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    font-family: 'TANSONGBIRD', sans-serif;
+    color: var(--presentation-text);
+  }
+  
+  .competences-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+  
+  .competences-list li {
+    margin-bottom: 2rem;
+    font-family: 'TT Chocolates Trial Medium', sans-serif;
+    color: var(--presentation-text);
+  }
+  
+  @media (max-width: 768px) {
+    .presentation-content {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto auto auto;
+      grid-template-areas:
+        "photo"
+        "title"
+        "parag1"
+        "parag2"
+        "compet";
+    }
+    .photo-container {
+      margin-bottom: 1rem;
+    }
+  }
+  
+  /* Bannière CV */
+  .cv-section {
+    margin: 0;
+    text-align: center;
+    background-color: #ffc067;
+  }
+  
+  .wave-svg {
+    width: 100%;
+    height: 100px;
+    display: block;
+    margin: 0 auto;
+    font-family: 'TANSONGBIRD', sans-serif;
+  }
+
+  .wave-svg text{
+    fill: var(--CV); 
+    font-size: 24; 
+    font-weight: bold;
+  }
+  
+  /* PROJETS */
+  .projets {
+    background-color: var(--projets);
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  
+  .project_lavender {
+    position: relative;
+    background-color: var(--lavender);
+    width: 80%;
+    max-width: 1200px;
+    margin: 2rem auto 2rem;
+    padding: 2rem 8rem;
+    text-align: center;
+    overflow: visible;
+  }
+  
+  .project_lila {
+    position: relative;
+    background-color: var(--lila);
+    width: 90%;
+    max-width: 1200px;
+    margin: 1rem auto 1rem;
+    padding: 1rem 1rem;
+    text-align: center;
+    overflow: visible;
+  }
+  
+  .project-list {
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .project-item {
+    text-align: center;
+  }
+  
+  .flame-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .flame {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .project-description {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(0, -50%);
+    width: 40%;
+    text-align: left;
+    color: #333;
+  }
+  
+  .flame-container:hover .flame {
+    transform: translateY(-5px) rotate(3deg);
+  }
+  
+  @media (max-width: 768px) {
+    .project-description {
+      position: static;
+      transform: none;
+      width: auto;
+      margin-top: 1rem;
+    }
+    .flame-container {
+      width: 250px;
+    }
+  }
+  
+  /* CONTACT */
+  .contact-section {
+    position: relative;
+    background-color: var(--contact);
+    padding: 3rem 1rem;
+    min-height: 300px;
+  }
+  
+  .contact-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    z-index: 0;
+    background-image:
+      linear-gradient(45deg, var(--checker) 25%, transparent 25%, transparent 75%, var(--checker) 75%, var(--checker)),
+      linear-gradient(45deg, var(--checker) 25%, transparent 25%, transparent 75%, var(--checker) 75%, var(--checker));
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
+  }
+  
+  .contact-container {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .contact-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .contact-left h2 {
+    font-size: 2rem;
+    color: var(--contact_left);
+    margin: 0;
+    font-family: 'TANSONGBIRD', sans-serif;
+    text-shadow:
+    3px 3px 0 var(--contact-right-bg),
+    -3px 3px 0 var(--contact-right-bg),
+    -3px -3px 0 var(--contact-right-bg),
+    3px -3px 0 var(--contact-right-bg);
+  }
+  
+  .email-input {
+    width: 100%;
+    max-width: 300px;
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+  }
+  
+  .send-button {
+    background-color: var(--send_button);
+    color: #fff;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .send-button:hover {
+    background-color: var(--send_button_hover);
+  }
+  
+  .contact-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .social-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .social-item span{
+    color: var(--social);
+    font-family: 'TT Chocolates Trial Medium', sans-serif;
+  }
+  
+  .social-icon {
+    width: 30%;
+    height: 30%;
+    object-fit: contain;
+  }
+  
+  @media (max-width: 768px) {
+    .contact-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .contact-left, .contact-right {
+      align-items: center;
+    }
+    .email-input {
+      max-width: 100%;
+    }
+  }
+
+  /* ACCUEIL book*/
+  .accueil-book {
+    position: relative;
+    min-height: 100vh;
+    background-color: #ed86ad;
+    overflow: hidden;
+    margin: 0;
+  }
+  
+  .accueil-book-title-container {
+    position: relative;
+    background-color: #ffdac5;
+    width: 80%;
+    max-width: 1200px;
+    margin: 10rem auto 2rem;
+    padding: 2rem 8rem;
+    text-align: center;
+    overflow: visible;
+  }
+  /* NAV (sticky) */
+  .main-book-header {
+    position: sticky;
+    font-family: 'TANSONGBIRD', sans-serif;
+    top: 0;
+    background-color: #ffdac5;
+    z-index: 999;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .main-book-header ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 1rem;
+  }
+  
+  .main-book-header ul li a {
+    text-decoration: none;
+    color: #f53d8c;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+
+  @media (max-width: 768px) {
+    .main-book-header ul li a {
+     font-size: small;
+    }
+  }
+  
+  .main-book-header ul li a:hover {
+    color: #ed86ad;
+  }
+
+  /* SHOOTING book*/
+
+  .shootings {
+    display: flex;
+   flex-direction: column;
+   padding-bottom: 2rem;
+   background-color: #ffdac5;
+  }
+  
+
+  #shootings img {
+    width: 100vw;  
+    height: 100vh; 
+    object-fit: cover; 
+    display: block;
+  }
+  /*VIDEO book*/
+  #videos {
+    display: flex;
+   gap: 2rem;
+    padding: 2rem;
+    height: 100vh;
+   align-items: center;
+   padding-top: 55rem;
+   padding-bottom: 60rem;
+   background-color: #ffdac5;
+  }
+
+  @media (max-width: 768px) {
+    #videos {
+      padding-top: 0rem;
+      padding-bottom: 20rem;
+    }
+    .videos-column {
+      margin-top: 0rem;
+    }
+    .cv {
+      padding-top: 20rem;
+      font-size: 50%;
+    }
+
+  }
+
+  .videos-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex: 1;
+    align-items: center;
+    margin-top: 24rem;
+  }
+
+  .video-landscape {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+
+  .video-portrait {
+    width: 60%;
+    aspect-ratio: 9 / 16;
+    object-fit: cover;
+    border: none;
+  }
+
+  .cv {
+   flex: 1;
+   display: flex;
+    flex-direction: column;
+   justify-content: center;
+   text-align: center;
+  }
+
+  .cv h2 {
+    text-decoration: none;
+    color: #f53d8c;
+    font-weight: bold;
+    font-family: 'TANSONGBIRD', sans-serif;
+    padding-bottom: 2rem;
+  }
+
+  .cv h3 {
+    text-decoration: none;
+    color: #f53d8c;
+    font-weight: bold;
+    font-family: 'TT Chocolates Trial Medium', sans-serif;
+  }
+
+  .cv ul li {
+    text-decoration: none;
+    color: #f53d8c;
+    font-family: 'TT Chocolates Trial Medium', sans-serif;
+    list-style: none; 
+  }
+
+  /*BANDE DEMO book*/
+  #bandedemo {
+   background-color: #ffdac5;
+   padding: 25rem 2rem;
+    text-align: center;
+  }
+
+  #bandedemo h2 {
+    text-decoration: none;
+    color: #f53d8c;
+    font-weight: bold;
+    font-family: 'TANSONGBIRD', sans-serif;
+    padding-bottom: 4rem;
+  }
+
+  .bande_demo-container {
+   max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .bande_demo-container video {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+
+    /* ACCUEIL design*/
+  .accueil-design {
+    position: relative;
+    min-height: 100vh;
+    background-color: #c0a3e1;
+    overflow: hidden;
+    margin: 0;
+  }
+  
+  .accueil-design-title-container {
+    position: relative;
+    background-color: #ebf3fa;
+    width: 80%;
+    max-width: 1200px;
+    margin: 10rem auto 2rem;
+    padding: 2rem 8rem;
+    text-align: center;
+    overflow: visible;
+  }
+  /* NAV (sticky) */
+  .main-design-header {
+    position: sticky;
+    font-family: 'TANSONGBIRD', sans-serif;
+    top: 0;
+    background-color: #ebf3fa;
+    z-index: 999;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .main-design-header ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 1rem;
+  }
+  
+  .main-design-header ul li a {
+    text-decoration: none;
+    color: #5f7b99;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+
+  @media (max-width: 768px) {
+    .main-design-header ul li a {
+     font-size: small;
+    }
+  }
+  
+  .main-design-header ul li a:hover {
+    color: #c0a3e1;
+  }
+
+  /* Carrousel Dev */
+  .section-title {
+    font-size: 2rem;
+    margin: 3rem 0 1rem;
+    text-align: center;
+    font-weight: 600;
+    color: #c0a3e1;
+    font-family: 'TANSONGBIRD', sans-serif;
+  }
+
+  .section-desc {
+    font-size: 1.1rem;
+    text-align: center;
+    background-color: #ebf3fa;
+    padding: 100px;
+    color: #c0a3e1;
+    font-family: 'TT Chocolates Trial Medium', sans-serif;
+  }
+
+  .carousel-container {
+    overflow-x: auto;
+    display: flex;
+    gap: 1rem;
+    padding: 2rem;
+    background-color: #ebf3fa;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .carousel-item {
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+    width: 300px;
+    height: 200px;
+    position: relative;
+    cursor: pointer;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  }
+
+  .carousel-item img,
+  .carousel-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+ /* Modal */
+  .modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(235, 243, 250, 0.2); /* #ebf3fa avec opacité */
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-content {
+  position: relative;
+  background: rgba(192, 163, 225, 1);
+  padding: 2rem;
+  padding-top: 1rem;
+  border-radius: 1rem;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.2),
+    inset 0 0 20px rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  color: white;
+  font-family: 'TT Chocolates Trial Medium', sans-serif;
+}
+
+.modal-content::before{
+  content: '';
+  position: absolute;
+  background: rgba(192, 163, 225, 1);
+  border-radius: 50%;
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.2),
+}
+
+.modal-content::before {
+  width: 440px;
+  height: 100px;
+  top: -50px;
+  left: 30px;
+}
+
+/* Bouton croix "X" à gauche */
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  line-height: 1;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.modal-close:hover {
+  color: #f9dfff;
+  transform: scale(1.2);
+}
+
+/* Optionnel : améliorer le texte */
+.modal-content p {
+  margin-top: 2rem;
+  font-size: 1.1rem;
+}

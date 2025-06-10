@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- ACCUEIL -->
+  <section id="accueil" class="accueil">
+
+    <div class="accueil-title-container">
+      <img src="images/portfolio_title.png" alt="" class="accueil-title-image" data-light="images/portfolio_title.png" data-dark="images/dark_portfolio_title.png">
+    </div>
+  
+
+    <div class="image-container">
+      <img src="images/photo.png" alt="Bienvenue sur mon portfolio" class="accueil-photo" data-light="images/photo.png" data-dark="images/dark_photo.png">
+    </div>
+  </section>
+
+  <!-- NAV STICKY EN HEADER -->
+  <nav class="main-header">
+    <ul>
+      <li><a href="#accueil" id="nav1">Accueil</a></li>
+      <li><a href="#presentation" id="nav2">Présentation</a></li>
+      <li><a href="#projets" id="nav3">Projets</a></li>
+      <li><a href="#contact" id="nav4">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- PRESENTATION -->
+  <section id="presentation" class="presentation">
+    <div class="presentation-container">
+      <div class="presentation-content">
+
+        <div class="photo-container">
+          <img src="images/gif_photo.gif" alt="C'est moi ! Valentin Joannès" class="gif-frame" data-light="images/gif_photo.gif" data-dark="images/dark_gif_photo.gif">
+        </div>
+
+        <h2 class="presentation-title" id="presentation-title">
+          C'est dans l'<button onClick="topFunction()" aria-label="Appuie et découvre mon porfolio en dark mode" id="toggleTheme" class="inline-toggle">Obscurité</button> que les étoiles brillent le plus !
+        </h2>
+
+        <p class="paragraph1" id="paragraph1"> 
+          <strong>Créatif, passionné par les arts,</strong><br> 
+          J’aime jouer avec le pouvoir de la perception et de la communication en y plaçant, au cœur, la notion d’interactivité.
+        </p>
+
+        <p class="paragraph2" id="paragraph2">
+          <strong>Issu d’un bac littéraire, spécialité théâtre,</strong><br>
+          J’ai voyagé entre milieu artistique, linguistique et digital afin d’accumuler un lourd bagage de connaissances et compétences. Diplômé ou autodidacte, je me sers des ressources à ma disposition afin de pouvoir satisfaire les envies, projets et objectifs de mes partenaires. Tout cela au rythme d’une collaboration dynamique, créative, inclusive et respectueuse.
+        </p>
+
+        <div class="competences-block">
+          <h3 id="competence-title"><u>Compétences</u></h3>
+          <ul class="competences-list">
+            <li id="soft-skills"><strong>Soft Skills :</strong><br> Adaptabilité - Résolution de problèmes - Sens du service -
+                Créativité & Originalité - Esprit critique - Logique -
+                Relationnel</li>
+            <li id="hard-skills"><strong>Hard Skills :</strong><br>Langue anglaise - Langue Espagnole - Développement front -
+                Développement back - Maquettage - Création de contenu multimédia -
+                Storytelling - Programmation orienté machines - GRAFCET - 
+                Système d’exploitation - UX/UI - Unreal Engine
+                Blender - Rédaction d'articles - SEO</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BANNIERE CV -->
+  <section class="cv-section">
+    <a id="cv-link" href="images/Light_JOANNES_Valentin_CV.pdf" aria-label="Appuie et jette un oeil à mon CV" target="_blank" data-light="images/Light_JOANNES_Valentin_CV.pdf" data-dark="images/Dark_JOANNES_Valentin_CV.pdf">
+      <svg class="wave-svg" viewBox="0 0 1200 100" preserveAspectRatio="xMidYMid meet">
+        <path id="wavePath" fill="none" stroke="none" 
+              d="M 0,50 Q 300,0 600,50 T 1200,50" />
+        <text>
+          <textPath xlink:href="#wavePath" startOffset="0%">
+            Téléchargez mon CV ★ Download my resume ★ Téléchargez mon CV ★ Download my resume ★ Téléchargez mon CV ★ Download my resume ★
+            <animate attributeName="startOffset" from="0%" to="-100%" begin="0s" dur="10s" repeatCount="indefinite" />
+          </textPath>
+        </text>
+      </svg>
+    </a>
+  </section>
+
+  <!-- PROJETS -->
+  <section id="projets" class="projets">
+    <div class="project_lavender">
+      <div class="project_lila">
+        <div class="project-list">
+
+          <div class="project-item">
+            <div class="flame-container">
+              <a href="Book_Photo.html" aria-label="Appuie et découvre mon Book Photo" target="_blank">
+                <img src="images/book_photo_flamme.png" alt="" class="flame" data-light="images/book_photo_flamme.png" data-dark="images/dark_book_photo_flamme.png"/>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-item">
+            <div class="flame-container">
+              <a href="Design.html" target="_blank" aria-label="Appuie et découvre mes créations et designs">
+                <img src="images/design_flamme.png" alt="" class="flame" data-light="images/design_flamme.png" data-dark="images/dark_design_flamme.png"/>
+              </a>
+            </div>
+          </div>
+        </div> 
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact-section">
+    <div class="contact-container">
+
+      <div class="contact-left">
+        <h2>Contactez moi !</h2>
+        <input type="email" class="email-input" placeholder="Adresse e-mail" required>
+        <button class="send-button">Envoyer</button>
+      </div>
+
+      <div class="contact-right">
+        <div class="social-item">
+          <a href="https://www.instagram.com/val_jnns/" aria-label="Lien vers mon Instagram" target="_blank">
+            <img src="images/instagram_icon.png" alt="" class="social-icon">
+          </a>
+          <span>val_jnns</span>
+        </div>
+        <div class="social-item">
+          <a href="https://www.linkedin.com/in/valentin-joann%C3%A8s-37730432a/" aria-label="Lien vers mon LinkedIn" target="_blank">
+            <img src="images/Linkedin_icon.png" alt="" class="social-icon">
+          </a>
+          <span>Valentin Joannès</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+{
+    "fr": {
+        "nav1": "Accueil",
+        "nav2": "Présentation",
+        "nav3": "Projets",
+        "nav4": "Contact",
+        "presentation-title": " C'est dans l' que les étoiles brillent le plus !",
+        "toggleTheme": "Obscurité",
+        "paragraph1": "<strong>Créatif, passionné par les arts,</strong><br> J’aime jouer avec le pouvoir de la perception et de la communication en y plaçant, au cœur, la notion d’interactivité.",
+        "paragraph2": "<strong>Issu d’un bac littéraire, spécialité théâtre,</strong><br> J’ai voyagé entre milieu artistique, linguistique et digital afin d’accumuler un lourd bagage de connaissances et compétences. Diplômé ou autodidacte, je me sers des ressources à ma disposition afin de pouvoir satisfaire les envies, projets et objectifs de mes partenaires. Tout cela au rythme d’une collaboration dynamique, créative, inclusive et respectueuse.",
+        "competence-title": "Compétences",
+        "soft-skills": "<strong>Soft Skills :</strong><br> Adaptabilité - Résolution de problèmes - Sens du service - Créativité & Originalité - Esprit critique - Logique - Relationnel",
+        "hard-skills": "<strong>Hard Skills :</strong><br> Langue anglaise - Langue Espagnole - Développement web front - Développement web back - Maquettage - Création de contenu multimédia - Storytelling - Programmation orienté machines - GRAFCET - Système d’exploitation"
+    },
+    "en": {
+        "nav1": "Home",
+        "nav2": "Introduction",
+        "nav3": "Projects",
+        "nav4": "Contact",
+        "presentation-title": " It's in the  that stars shine the most !",
+        "toggleTheme": "Dark",
+        "paragraph1": "<strong>Creative mind, and art lover,</strong><br> I love to play around perception and communication while designing, at its core, the notion of interactivity.",
+        "paragraph2": "<strong>Coming from a literary baccalaureate, specialized in drama arts,</strong><br> J’ai voyagé entre milieu artistique, linguistique et digital afin d’accumuler un lourd bagage de connaissances et compétences. Diplômé ou autodidacte, je me sers des ressources à ma disposition afin de pouvoir satisfaire les envies, projets et objectifs de mes partenaires. Tout cela au rythme d’une collaboration dynamique, créative, inclusive et respectueuse.",
+        "competence-title": "Skill set",
+        "soft-skills": "<strong>Soft Skills :</strong><br> Adaptabilité - Résolution de problèmes - Sens du service - Créativité & Originalité - Esprit critique - Logique - Relationnel",
+        "hard-skills": "<strong>Hard Skills :</strong><br>Langue anglaise - Langue Espagnole - Développement web front - Développement web back - Maquettage - Création de contenu multimédia - Storytelling - Programmation orienté machines - GRAFCET - Système d’exploitation"
+    }
+  }
