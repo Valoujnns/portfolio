@@ -21,13 +21,14 @@
       <li><a href="#photos" id="nav2">Photos</a></li>
       <li><a href="#videos" id="nav3">Vidéos</a></li>
       <li><a href="#bandedemo" id="nav4">Bande Démo</a></li>
+      <li><a href="#contact" id="nav5">Contact</a></li>
     </ul>
   </nav>
   <!-- PHOTOS -->
   <section id="photos" class="shootings">
-  <img src="images/shooting1.png" alt="Shooting photo professionnel">
-  <img src="images/shooting2.png" alt="Shooting photo e-commerce">
-  <img src="images/shooting3.png" alt="Shooting photo editorial">
+  <img src="shooting1.png" alt="Shooting photo professionnel">
+  <img src="shooting2.png" alt="Shooting photo e-commerce">
+  <img src="shooting3.png" alt="Shooting photo editorial">
  </section>
  <!-- VIDEOS -->
   <section id="videos">
@@ -62,12 +63,12 @@
       <h3>Contrats</h3>
         <ul>
           <li><strong>Silhouette/Modèle</strong>, campagne publicitaire — Bombardier — <em>octobre 2018</em></li>
-          <li><strong>Figuration</strong>, série — <em>De Gaulle, le secret et l’éclat</em> — <em>novembre 2019</em></li>
+          <li><strong>Figuration</strong>, série — <em>De Gaulle, le secret et l'éclat</em> — <em>novembre 2019</em></li>
           <li><strong>Silhouette/Modèle</strong>, campagne publicitaire — Le Pas-de-Calais — <em>juillet 2020</em></li>
           <li><strong>Figuration</strong>, téléfilm — <em>Les petites femelles</em> — <em>août 2020</em></li>
           <li><strong>Silhouette/Modèle</strong>, campagne publicitaire — Pomdepin — <em>septembre 2020</em></li>
           <li><strong>Silhouette passante</strong> — <em>Prudence Ledoux a le vent en poupe</em> — <em>avril 2021</em></li>
-          <li><strong>Figuration</strong>, série — <em>Dans l’ombre</em> — <em>juillet 2023</em></li>
+          <li><strong>Figuration</strong>, série — <em>Dans l'ombre</em> — <em>juillet 2023</em></li>
           <li><strong>Modèle</strong>, campagne e-commerce — La Piscine Paris — <em>novembre 2023</em></li>
           <li><strong>Silhouette/Modèle</strong>, shooting éditorial mariage — @Magique_wedding — <em>septembre 2024</em></li>
           <li><strong>Silhouette/Modèle</strong>, contenu réseaux sociaux — Koota — <em>mai 2025</em></li>
@@ -87,5 +88,40 @@
     </div>
  </section>
 
+  <!-- CONTACT -->
+  <section id="contact" class="contact-section">
+    <div class="contact-container">
+
+      <div class="contact-left">
+        <h2>Contactez moi !</h2>
+        <form id="contact-form" class="contact-form" action="https://formspree.io/f/xjykyeeg" method="POST">
+          <input type="email" name="email" class="email-input" placeholder="Adresse e-mail" required>
+          <textarea name="message" class="message-input" placeholder="Votre message" required rows="4"></textarea>
+          <button type="submit" class="send-button">Envoyer</button>
+        </form>
+        <p id="form-status" class="form-status"></p>
+      </div>
+
+      <div class="contact-right">
+        <div class="social-item">
+          <a href="https://www.instagram.com/val_jnns/" aria-label="Lien vers mon Instagram" target="_blank">
+            <img src="images/instagram_icon.png" alt="" class="social-icon">
+          </a>
+          <span>val_jnns</span>
+        </div>
+        <div class="social-item">
+          <a href="https://www.linkedin.com/in/valentin-joann%C3%A8s-37730432a/" aria-label="Lien vers mon LinkedIn" target="_blank">
+            <img src="images/Linkedin_icon.png" alt="" class="social-icon">
+          </a>
+          <span>Valentin Joannès</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="script.js"></script>
 </body>
 </html>

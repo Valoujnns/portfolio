@@ -12,11 +12,10 @@
 
     <div class="accueil-title-container">
       <img src="images/portfolio_title.png" alt="" class="accueil-title-image" data-light="images/portfolio_title.png" data-dark="images/dark_portfolio_title.png">
-    </div>
-  
 
-    <div class="image-container">
-      <img src="images/photo.png" alt="Bienvenue sur mon portfolio" class="accueil-photo" data-light="images/photo.png" data-dark="images/dark_photo.png">
+      <div class="image-container">
+        <img src="images/photo.png" alt="Bienvenue sur mon portfolio" class="accueil-photo" data-light="images/photo.png" data-dark="images/dark_photo.png">
+      </div>
     </div>
   </section>
 
@@ -45,12 +44,12 @@
 
         <p class="paragraph1" id="paragraph1"> 
           <strong>Créatif, passionné par les arts,</strong><br> 
-          J’aime jouer avec le pouvoir de la perception et de la communication en y plaçant, au cœur, la notion d’interactivité.
+          J'aime jouer avec le pouvoir de la perception et de la communication en y plaçant, au cœur, la notion d'interactivité.
         </p>
 
         <p class="paragraph2" id="paragraph2">
-          <strong>Issu d’un bac littéraire, spécialité théâtre,</strong><br>
-          J’ai voyagé entre milieu artistique, linguistique et digital afin d’accumuler un lourd bagage de connaissances et compétences. Diplômé ou autodidacte, je me sers des ressources à ma disposition afin de pouvoir satisfaire les envies, projets et objectifs de mes partenaires. Tout cela au rythme d’une collaboration dynamique, créative, inclusive et respectueuse.
+          <strong>Issu d'un bac littéraire, spécialité théâtre,</strong><br>
+          J'ai voyagé entre milieu artistique, linguistique et digital afin d'accumuler un lourd bagage de connaissances et compétences. Diplômé ou autodidacte, je me sers des ressources à ma disposition afin de pouvoir satisfaire les envies, projets et objectifs de mes partenaires. Tout cela au rythme d'une collaboration dynamique, créative, inclusive et respectueuse.
         </p>
 
         <div class="competences-block">
@@ -62,7 +61,7 @@
             <li id="hard-skills"><strong>Hard Skills :</strong><br>Langue anglaise - Langue Espagnole - Développement front -
                 Développement back - Maquettage - Création de contenu multimédia -
                 Storytelling - Programmation orienté machines - GRAFCET - 
-                Système d’exploitation - UX/UI - Unreal Engine
+                Système d'exploitation - UX/UI - Unreal Engine
                 Blender - Rédaction d'articles - SEO</li>
           </ul>
         </div>
@@ -118,8 +117,12 @@
 
       <div class="contact-left">
         <h2>Contactez moi !</h2>
-        <input type="email" class="email-input" placeholder="Adresse e-mail" required>
-        <button class="send-button">Envoyer</button>
+        <form id="contact-form" class="contact-form" action="https://formspree.io/f/xjykyeeg" method="POST">
+          <input type="email" name="email" class="email-input" placeholder="Adresse e-mail" required>
+          <textarea name="message" class="message-input" placeholder="Votre message" required rows="4"></textarea>
+          <button type="submit" class="send-button">Envoyer</button>
+        </form>
+        <p id="form-status" class="form-status"></p>
       </div>
 
       <div class="contact-right">

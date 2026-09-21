@@ -116,3 +116,29 @@ document.addEventListener('DOMContentLoaded', () => {
   // expose closeModal to global scope
   window.closeModal = closeModal;
 });
+
+// Envoi du formulaire de contact via Formspree (AJAX, sans recharger la page)
+const contactForm = document.getElementById('contact-form');
+const formStatus = document.getElementById('form-status');
+
+if (contactForm) {
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const data = new FormData(contactForm);
+    try {
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+      if (response.ok) {
+        formStatus.textContent = "Message envoyé, merci !";
+        contactForm.reset();
+      } else {
+        formStatus.textContent = "Une erreur est survenue, réessaie plus tard.";
+      }
+    } catch (error) {
+      formStatus.textContent = "Une erreur est survenue, réessaie plus tard.";
+    }
+  });
+}
